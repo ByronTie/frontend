@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Sign Up Form</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <link href="styles/styles.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>
+      <a>Question 1</a>
+    </h1>
+    <nav>
+      <li>
+        <a>Home</a>
+      </li>
+      <li>
+        <a>About</a>
+      </li>
+      <li>
+        <a>Contact Us</a>
+      </li>
+    </nav>
+  </header>
+  <main>
+    <section class="content">
+      <form id="signup">
+        <h3>Sign Up</h3>
+        <div class="alert"></div>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="John Doe" />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="text" id="email" name="email" placeholder="john@doe.com" />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" />
+        </div>
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" />
+        </div>
+        <hr>
+        <div class="form-group">
+          <label for="referrer">Referrer</label>
+          <label>
+            <input type="checkbox" name='referrer' value="none">None</input>
+          </label>
+          <label>
+            <input type="checkbox" name='referrer' value="employee">Employee</input>
+          </label>
+          <label>
+            <input type="checkbox" name='referrer' value="recruitementAgency">Rercuitment Agency</input>
+          </label>
+          <label>
+            <input type="checkbox" name='referrer' id="cother" value="other">Other</input>
+          </label>
+          <label>
+            <input type="text" id="other" name="other" disabled="disabled" />
+          </label>
+          <label for="referrer" class="error"></label>
+        </div>
+        <hr>
+        <div class="form-group">
+          <label for="accountType">Account Type</label>
+          <label>
+            <input type="radio" name="accountType" value="student">Student</input>
+          </label>
+          <label>
+            <input type="radio" name="accountType" value="standard" checked="checked">Standard</input>
+          </label>
+          <label>
+            <input type="radio" name="accountType" value="professional">Professional</input>
+          </label>
+          <label>
+            <input type="radio" name="accountType" value="enterprise">Enterprise</input>
+          </label>
+          <label for="accountType" class="error"></label>
+        </div>
+        <hr>
+        <div class="form-group">
+          <label>
+            <input type="checkbox" id="tos" name="tos" value="tos">I accept the Terms of Service</input>
+          </label>
+          <a href="#">Read our Terms of Service</a>
+          <label for="tos" class="error"></label>
+        </div>
+        <div class="form-group">
+          <button id="reset" type="reset">Reset</button>
+          <button type="submit">Sign up</button>
+        </div>
+      </form>
+    </section>
+    <aside>ASIDE</aside>
+  </main>
+  <footer>FOOTER</footer>
+  <script src="./lib/index.js"></script>
+</body>
+
+</html>
