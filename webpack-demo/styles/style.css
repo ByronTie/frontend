@@ -9,5 +9,5 @@
 .hello {
   color: red;
   font-family: 'MyFont';
-  background-image: url('../images/favIcon.ico');
+  background: url('../images/favIcon.ico') no-repeat;
 }
