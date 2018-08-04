@@ -1,10 +1,11 @@
 @font-face {
-  font-family: 'MyFont';
-  src: url('./garamond_regular.ttf'),
-    url('./impact_label.ttf');
-  font-weight: 600;
-  font-style: normal;
-}
+   font-family: 'MyFont';
+   src:  
+    url('./garamond_regular.ttf') format('garamond_regular'),
+    url('./impact_label.ttf') format('impact_label');
+   font-weight: 600;
+   font-style: normal;
+ }
 
 .hello {
   color: red;

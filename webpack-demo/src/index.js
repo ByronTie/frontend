@@ -1,13 +1,12 @@
-import _ from 'lodash';
 import '../styles/style.css';
 import favIcon from '../images/favIcon.ico';
-import Data from '../data/data.xml';
-import printMe from './print.js';
+import { printMe } from './print';
+import data from '../data/data.xml';
 
 function component() {
-    var element = document.createElement('div');
-    var myIcon = new Image();
-    var btn = document.createElement('button');
+    let element = document.createElement('div');
+    let btn = document.createElement('button');
+    let myIcon = new Image();
 
     element.innerHTML = _.join(['Hello', 'world'], ' ');
     element.classList.add("hello");
@@ -15,22 +14,12 @@ function component() {
     myIcon.src = favIcon;
     element.appendChild(myIcon);
 
-    btn.innerHTML = "Click me and check the console";
+    btn.innerHTML = 'Click here for console message';
     btn.onclick = printMe;
     element.appendChild(btn);
 
-    console.log(Data);
+    console.log(data);
     return element;
-};
+}
 
-let element = component();
-document.body.appendChild(element);
-
-if (module.hot) {
-    module.hot.accept('./print.js', function () {
-        console.log('Accepting the updated printMe module!');
-        document.body.removeChild(element);
-        element = component(); //Re-render component to update the click handler
-        document.body.appendChild(element);
-    });
-};
+document.body.appendChild(component());

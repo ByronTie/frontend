@@ -1,5 +1,3 @@
-import _ from 'lodash';
-
-console.log(
+console.log((() => 
     _.join(['Another', 'module', 'loaded!'], ' ')
-);
+)());

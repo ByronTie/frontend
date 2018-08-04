@@ -1,7 +1,7 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const webpack = require("webpack");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     mode: 'development',
@@ -9,29 +9,9 @@ module.exports = {
         app: './src/index.js',
         another: './src/another-module.js'
     },
-    plugins: [
-        new CleanWebpackPlugin([
-            'dist'
-        ]),
-        new HtmlWebpackPlugin({
-            title: 'Output Management'
-        }),
-        new webpack.HotModuleReplacementPlugin()
-    ],
     output: {
         filename: '[name].bundle.js',
-        path: path.resolve(__dirname, 'dist'),
-        publicPath: '/'
-    },
-    devtool: 'inline-source-map',
-    devServer: {
-        contentBase: './dist',
-        hot: true
-    },
-    optimization: {
-        splitChunks: {
-            chunks: 'all'
-        }
+        path: path.resolve(__dirname, 'dist')
     },
     module: {
         rules: [
@@ -67,5 +47,27 @@ module.exports = {
                 ]
             }
         ]
+    },
+    plugins: [
+        new webpack.ProvidePlugin({
+            _: 'lodash'
+        }),
+        new CleanWebpackPlugin([
+            'dist'
+        ]),
+        new HtmlWebpackPlugin({
+            title: "Webpack practice"
+        }),
+        new webpack.HotModuleReplacementPlugin()
+    ],
+    devtool: 'inline-source-map',
+    devServer: {
+        contentBase: './dist',
+        hot: true
+    },
+    optimization: {
+        splitChunks: {
+            chunks: 'all'
+        }
     }
-}
+};
