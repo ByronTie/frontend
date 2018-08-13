@@ -1,3 +1,4 @@
+import 'babel-polyfill';
 import '../styles/style.css';
 import favIcon from '../images/favIcon.ico';
 import { printMe } from './print';
