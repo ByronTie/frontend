@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,700");
+
+/* General styles */
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: #353535;
+  color: #c4c4c4;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.45;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Navigation */
+
+header {
+  background: #4f4f4f;
+  flex: 1 1 20%;
+  min-width: 280px;
+  padding: 3em;
+}
+
+.logo {
+  text-transform: uppercase;
+  margin-bottom: 2em;
+}
+@media (min-width: 1500px) {
+  .logo {
+    margin-bottom: 5em;
+  }
+}
+.logo span {
+  font-weight: 700;
+}
+
+.nav-item {
+  color: #737373;
+  text-decoration: none;
+  font-size: 1.7rem;
+  display: inline-block;
+  margin-right: 2em;
+}
+@media (min-width: 1500px) {
+  .nav-item {
+    display: block;
+    margin: 7vh 0;
+  }
+}
+.nav-item.active {
+  color: #c4c4c4;
+}
+
+/* Main Content area */
+
+.main-content {
+  position: relative;
+  padding: 10%;
+  flex: 1 1 80%;
+  min-height: 200vh;
+}
+
+/* Portfolio */
+
+.portfolio {
+  display: grid;
+  height: 100%;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 20px;
+}
+
+.portfolio-item {
+  background: #f96855;
+  color: #353535;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.portfolio-item.square {
+  grid-row: span 2;
+  grid-column: span 2;
+}
+.portfolio-item.large-square {
+  grid-row: span 3;
+  grid-column: span 3;
+}
+.portfolio-item.small-square {
+  grid-row: span 1;
+  grid-column: span 1;
+}
+.portfolio-item.tall {
+  grid-row: span 3;
+  grid-column: span 2;
+}
+.portfolio-item.wide {
+  grid-row: span 2;
+  grid-column: span 3;
+}
+
+.two,
+.six {
+  background-image: url("https://unsplash.it/800/600");
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  color: #c4c4c4;
+}
+
+.six {
+  background-color: #5f5e5e;
+}
+
+.acknowledge {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.acknowledge a {
+  font-size: .7em;
+  color: #737373;
+  flex: 1 1 100%;
+}
