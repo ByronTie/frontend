@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,700");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+}
+
+.bg1 {
+  background-image: url("https://unsplash.it/1920/1080?random");
+}
+
+.bg2 {
+  background-image: url("https://unsplash.it/1920/1081?random");
+}
+
+.bg3 {
+  background-image: url("https://unsplash.it/1920/1082?random");
+}
+
+.parallax {
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  opacity: .8;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.5em;
+  font-weight: 700;
+  color: white;
+}
+
+.parallax h1 {
+  text-align: center;
+  padding-top: 25%;
+  text-shadow: 0 .1em .1em rgba(0, 0, 0, .25);
+}
+
+.content {
+  padding: 2em;
+  background-color: #FFEE00;
+  color: #1d1d1d;
+}
+
+.header {
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #02FFE9;
+}
+
+.header h1 {
+  color: #1d1d1d;
+}
