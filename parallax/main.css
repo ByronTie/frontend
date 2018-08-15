@@ -11,7 +11,7 @@ body {
 }
 
 .bg1 {
-  background-image: url("https://unsplash.it/1920/1080?random");
+  background-image: url("https://unsplash.it/g/1920/1080?random");
 }
 
 .bg2 {
@@ -28,19 +28,25 @@ body {
   background-position: top;
   background-repeat: no-repeat;
   opacity: .8;
+
+  /* for header */
+  position: relative;
 }
 
 h1 {
   margin: 0;
-  font-size: 2.5em;
+  font-size: 2em;
   font-weight: 700;
   color: white;
 }
 
 .parallax h1 {
+  position: absolute;
+  top: 50%;
   text-align: center;
-  padding-top: 25%;
-  text-shadow: 0 .1em .1em rgba(0, 0, 0, .25);
+  padding: 1em;
+  padding-left: 2em;
+  background-color: #1d1d1d;
 }
 
 .content {
