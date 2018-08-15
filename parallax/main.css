@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -40,6 +45,16 @@ h1 {
   color: white;
 }
 
+.header {
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #02FFE9;
+}
+
+.header h1 {
+  color: #1d1d1d;
+}
+
 .parallax h1 {
   position: absolute;
   top: 50%;
@@ -55,12 +70,10 @@ h1 {
   color: #1d1d1d;
 }
 
-.header {
-  text-align: center;
-  text-transform: uppercase;
-  background-color: #02FFE9;
-}
-
-.header h1 {
-  color: #1d1d1d;
+.acknowledge {
+  position: absolute;
+  bottom: 1em;
+  left: 1em;
+  font-size: .8rem;
+  color: white;
 }
