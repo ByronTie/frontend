@@ -15,27 +15,29 @@ body {
   font-family: "Raleway", sans-serif;
 }
 
-.bg1 {
-  background-image: url("https://unsplash.it/g/1920/1080?random");
-}
-
-.bg2 {
-  background-image: url("https://unsplash.it/1920/1081?random");
-}
-
-.bg3 {
-  background-image: url("https://unsplash.it/1920/1082?random");
-}
-
 .parallax {
-  height: 100vh;
   background-attachment: fixed;
   background-position: top;
   background-repeat: no-repeat;
   opacity: .8;
-
+  
   /* for header */
   position: relative;
+}
+
+.bg1 {
+  background-image: url("https://unsplash.it/g/1920/1080?random");
+  height: 100vh;
+}
+
+.bg2 {
+  background-image: url("https://unsplash.it/1920/1081?random");
+  height: 40vh;
+}
+
+.bg3 {
+  background-image: url("https://unsplash.it/1920/1082?random");
+  height: 60vh;
 }
 
 h1 {
